@@ -4,7 +4,8 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', function ()
 	builtin.grep_string({ search = vim.fn.input("Grep > ")})
 end)
-overrides = function(colors)
+
+Overrides = function(colors)
     local theme = colors.theme
     return {
         TelescopeTitle = { fg = theme.ui.special, bold = true },
