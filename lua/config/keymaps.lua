@@ -49,14 +49,6 @@ local nohEsc = "<cmd>nohlsearch<CR><esc>"
 map("n", "<ESC>", nohEsc, { desc = "Clear search highlight" })
 map({ "n", "v", "i" }, "<C-c>", nohEsc, { desc = "Clear search highlight (C-c)" })
 
--- Easier square brackets (for e.g. mini.bracketed)
-map({ "n", "o", "v" }, "å", "[", { remap = true, desc = "Left bracket" })
-map({ "n", "o", "v" }, "¨", "]", { remap = true, desc = "Right bracket" })
-
--- Since the above remaps mark keybinds, do this instead:
-map("n", "m'", "'", { noremap = true, desc = "Jump to mark '" })
-map("n", "m`", "`", { noremap = true, desc = "Jump to mark `" })
-
 -- Fuzzy finding
 map("n", "<leader>f", "<cmd>FzfLua files<CR>", { desc = "Find files" })
 map("n", "<leader>b", "<cmd>FzfLua buffers<CR>", { desc = "Find buffers" })

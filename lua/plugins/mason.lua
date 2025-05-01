@@ -1,6 +1,5 @@
 -- lua/plugins/mason.lua
 return {
-  -- 1) mason.nvim itself
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
@@ -9,7 +8,6 @@ return {
     end,
   },
 
-  -- 2) mason-lspconfig to auto-install servers
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = "mason.nvim",
@@ -20,7 +18,6 @@ return {
     end,
   },
 
-  -- 3) nvim-lspconfig to actually configure each server
   {
     "neovim/nvim-lspconfig",
     dependencies = "mason-lspconfig.nvim",
